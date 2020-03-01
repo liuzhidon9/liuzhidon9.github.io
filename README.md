@@ -1,6 +1,3 @@
----
-
----
 
 # 项目展示
 ## 1.Vue项目：Vue+Vuex+JavxaScript+Less+Axios+Vant框架
