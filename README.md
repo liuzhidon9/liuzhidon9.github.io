@@ -2,7 +2,7 @@
 # 项目展示
 ## 1.Vue项目：Vue+Vuex+JavxaScript+Less+Axios+Vant框架
 
-- ### **[eyepetizer](https://liuzhidon9.github.io/eyepetizer)(仿开眼视频移动端)**
+- **[eyepetizer](https://liuzhidon9.github.io/eyepetizer)(仿开眼视频移动端)**
 
   
 
