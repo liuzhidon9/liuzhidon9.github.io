@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+ <title>Bootstrap 101 Template</title>
+
+ <!-- Bootstrap -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+ <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+ <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+ <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+ <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+ <!-- 导航栏 -->
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+   <!-- Brand and toggle get grouped for better mobile display -->
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+     data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="./images/logo.svg" class="img-responsive" alt="Responsive image"
+      alt=""></a>
+   </div>
+
+   <!-- Collect the nav links, forms, and other content for toggling -->
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+    <ul class="nav navbar-nav navbar-right">
+     <li><a href="#" class="active">HOME</a></li>
+     <li><a href="#">INTRO</a></li>
+     <li><a href="#">SERVICES</a></li>
+     <li><a href="#">CALL ME</a></li>
+     <li><a href="#">PROJECTS</a></li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+       aria-expanded="false">ABOUT <span class="caret"></span></a>
+      <ul class="dropdown-menu dropdown-menu-left ">
+       <li><a href="#">Action</a></li>
+       <li><a href="#">Another action</a></li>
+       <li><a href="#">Something else here</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="#">Separated link</a></li>
+      </ul>
+     </li>
+     <li><a href="#">CONTACT</a></li>
+    </ul>
+   </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+ </nav>
+ <section class="banner">
+  <div class="container">
+   <div class="row">
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+     <h1>BUSINESS SERVICES</h1>
+     <p>Aria is a top consultancy company specializing in business growth using online marketing and
+      conversion
+      optimization tactics</p>
+     <button class="btn btn-default"><a href="">DISCOVER</a></button>
+    </div>
+   </div>
+
+  </div>
+
+ </section>
+
+ <!-- INTRO -->
+ <section class="intro">
+  <div class="container">
+   <div class="row intro-t">
+
+    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+     <p class="tip">INTRO</p>
+     <h3>We Offer Some Of The Best Business Growth Services In Town</h3>
+     <p>Launching a new company or developing the market position of an existing one can be quite an
+      overwhelming
+      processs at times.</p>
+     <p>"Our mission here at Aira is to get you through those tough moments relying on our team's
+      expertise in
+      starting and growing companies."</p>
+     <h5>Louise Donovan - CEO</h5>
+    </div>
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+     <div class="img-fluid">
+      <img class="img-responsive" alt="Responsive image" src="./images/intro-office.jpg" alt="">
+     </div>
+    </div>
+
+   </div>
+   <div class="row intro-b">
+
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+     <div class="icon-box">
+      <span class="glyphicon glyphicon-camera"></span>
+     </div>
+
+     <h3>
+      Environment Analysis
+     </h3>
+     <p>The starting point of any success story is knowing your current position in the business
+      environment</p>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+     <div class="icon-box">
+      <span class="glyphicon glyphicon-list-alt"></span>
+     </div>
+     <h3>
+      Environment Analysis
+     </h3>
+     <p>The starting point of any success story is knowing your current position in the business
+      environment</p>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+     <div class="icon-box">
+      <span class="glyphicon glyphicon-tasks"></span>
+     </div>
+     <h3>
+      Environment Analysis
+     </h3>
+     <p>The starting point of any success story is knowing your current position in the business
+      environment</p>
+    </div>
+
+   </div>
+  </div>
+ </section>
+
+ <!-- SERVICES -->
+ <section class="services">
+  <div class="container">
+   <div class="title">
+    <h5>SERVICES</h5>
+    <h3>Choose The Service Package <br>
+     That Suits Your Needs</h3>
+   </div>
+   <div class="row">
+
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+     <div class="card">
+      <img src="./images/services-1.jpg" class="img-responsive" alt="Responsive">
+      <div class="card-box">
+       <h3>Off The Ground</h3>
+       <p>Perfect for fresh ideas or young
+        startups, this package will help get the business off the ground
+       </p>
+       <ul>
+        <li><span></span> Environment and competition</li>
+        <li><span></span> Designing the marketing plan</li>
+       </ul>
+       <p class="price">Starting at <span>$199</span></p>
+       <div class="detail">
+        <a href="#"> <button class="btn btn-default">DETAILS</button></a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+     <div class="card">
+      <img src="./images/services-2.jpg" class="img-responsive" alt="Responsive">
+      <div class="card-box">
+       <h3>Accelerated Growth</h3>
+       <p>Perfect for fresh ideas or young
+        startups, this package will help get the business off the ground
+       </p>
+       <ul>
+        <li><span></span> Environment and competition</li>
+        <li><span></span> Designing the marketing plan</li>
+       </ul>
+       <p class="price">Starting at <span>$199</span></p>
+       <div class="detail">
+        <a href="#"> <button class="btn btn-default">DETAILS</button></a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+     <div class="card">
+      <img src="./images/services-3.jpg" class="img-responsive" alt="Responsive">
+      <div class="card-box">
+       <h3>Market Domination</h3>
+       <p>You already are a reference point in your industry now you need to learn about acquisitions</p>
+       <ul>
+        <li><span></span> Environment and competition</li>
+        <li><span></span> Designing the marketing plan</li>
+       </ul>
+       <p class="price">Starting at <span>$299</span></p>
+       <div class="detail">
+        <a href="#"> <button class="btn btn-default">DETAILS</button></a>
+       </div>
+      </div>
+     </div>
+    </div>
+
+   </div>
+  </div>
+ </section>
+
+
+ <!-- Business -->
+ <section class="business">
+  <div class="container-fluid">
+   <div class="row row-top">
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <div class="fluid-img"></div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <div class="content">
+      <h3>Accelerate Business Growth To Improve Revenue Numbers</h3>
+      <dl>
+       <dt><span>1</span> How Can Aria Help Your Business</dt>
+       <dd>At Aria solutions, we’ve taken the consultancy concept one step further by offering a full service
+        management
+        organization with expertise.
+       </dd>
+      </dl>
+      <dl>
+       <dt><span>2</span>Great Strategic Business Planning</dt>
+       <dd>Aria partners with businesses to business growth and development ideas including environment analysis,
+        plan
+        execution and evaluation.
+       </dd>
+      </dl>
+      <dl>
+       <dt><span>3</span>Online Marketing Campaigns</dt>
+       <dd>An awesome online marketing plan won't save your bad product but paired with a good product, the sky
+        is the
+        limit for what can be achieved.
+       </dd>
+      </dl>
+     </div>
+    </div>
+
+   </div>
+
+   <div class="row row-bottom">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <div class="tabs">
+      <ul class="switch-tab">
+       <li><span class="glyphicon glyphicon-th" aria-hidden="true"></span>Business</li>
+       <li><span class="glyphicon glyphicon-th" aria-hidden="true"></span>Expertise</li>
+       <li><span class="glyphicon glyphicon-th" aria-hidden="true"></span>Quality</li>
+      </ul>
+      <ul class="content">
+       <li class="business">
+        <div class="info">
+         <h3>Business Services For Companies</h3>
+         <p>Aria provides the most innovative and customized business services in the industry. Our Services
+          section
+          shows how flexible we are for all types of budgets.</p>
+         <dl>
+          <dt>Business Development 100%</dt>
+          <dd></dd>
+         </dl>
+         <dl>
+          <dt>Opportunity Spotting 76%</dt>
+          <dd></dd>
+         </dl>
+         <dl>
+          <dt>Online Marketing 90%</dt>
+          <dd></dd>
+         </dl>
+        </div>
+       </li>
+       <li class="expertise">
+        <div class="info">
+         <div class="part">
+          <h1>1</h1>
+          <p><span>High quality</span> is on top of our list when it comes to the way we deliver the services
+          </p>
+         </div>
+         <div class="part">
+          <h1>2</h1>
+          <p><span>We're always looking</span> for industry leaders to help them win their market position</p>
+         </div>
+         <div class="part">
+          <h1>3</h1>
+          <p>
+           <span>Maximum impact</span> is what we look for in our actions</p>
+         </div>
+         <div class="part">
+          <h1>4</h1>
+          <p><span>Evaluation</span> is a key aspect of this business and important</p>
+         </div>
+         <div class="part">
+          <h1>5</h1>
+          <p><span>Quality standards</span> are important but meant to be exceeded</p>
+         </div>
+         <div class="part">
+          <h1>6</h1>
+          <p><span>Ethic</span> procedures ar alwasy at the base of everything we do</p>
+         </div>
+        </div>
+       </li>
+       <li class="quality">
+        <div class="info">
+         <p><span>We strive to achieve</span> 100% customer satisfaction for both types of customers: hiring
+          companies
+          and
+          job
+          seekers. Types of customers: with huge potential</p>
+         <p><span>Our goal is to help</span> your company achieve its full potential and establish long term
+          stability
+          for
+          the
+          stakeholders</p>
+         <ul>
+          <li><span></span>It's easy to get a quotation, just call our office anytime</li>
+          <li> <span></span>We'll get back to you with an initial estimate soon</li>
+          <li><span></span>Get ready to see results even after only 30 days</li>
+          <li><span></span>Ask for a quote and start improving your business</li>
+          <li><span></span>Just fill out the form and we'll call you right away</li>
+         </ul>
+        </div>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <div class="fluid-img"></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+
+ <!-- Read Our Customer Testimonials -->
+ <section class="read-our">
+  <h2>Read Our Customer Testimonials</h2>
+  <p>Our clients are our partners and we can not imagine a better future for our company without helping them reach
+   their objectives</p>
+  <div class="container">
+   <div class="swiper-container">
+    <div class="swiper-wrapper">
+     <div class="swiper-slide">
+      <img src="./images/testimonial-1.jpg" alt="">
+      <p>The guys from Aria helped with getting my business off the ground and turning into a profitable company.
+      </p>
+      <h5>Jude Thorn - Founder</h5>
+     </div>
+     <div class="swiper-slide">
+      <img src="./images/testimonial-2.jpg" alt="">
+      <p>I purchased the Growth Accelerator service pack a few years ago and I renewed the contract each year.</p>
+      <h5>Marsha Singer - Marketer</h5>
+     </div>
+     <div class="swiper-slide">
+      <img src="./images/testimonial-3.jpg" alt="">
+      <p>Aria's CEO personally attends client meetings and gives his feedback on business growth strategies.</p>
+      <h5>Roy Smith - Developer</h5>
+     </div>
+     <div class="swiper-slide">
+      <img src="./images/testimonial-4.jpg" alt="">
+      <p>At the beginning I thought the prices are a little high for what they offer but they over deliver each
+       and every time.</p>
+      <h5>Ronald Spice - Owner</h5>
+     </div>
+     <div class="swiper-slide">
+      <img src="./images/testimonial-5.jpg" alt="">
+      <p>My goals for using Aria's services seemed high when I first set them but they've met them with no
+       problems.</p>
+      <h5>Ann Black - Consultant</h5>
+     </div>
+     <div class="swiper-slide">
+      <img src="./images/testimonial-6.jpg" alt="">
+      <p>My goals for using Aria's services seemed high when I first set them but they've met them with no
+       problems.</p>
+      <h5>Ann Black - Consultant</h5>
+     </div>
+    </div>
+
+
+
+
+   </div>
+   <div class="swiper-container switch">
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+   </div>
+  </div>
+ </section>
+
+ <!-- CALL ME -->
+ <section class="call-me">
+  <div class="container">
+   <div class="row">
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left">
+     <h5>CALL ME</h5>
+     <h3>Have Us Contact You By Filling And Submitting The Form</h3>
+     <p>You are just a few steps away from a personalized offer. Just fill in the form and send it to us and we'll
+      get right back with a call to help you decide what service package works.</p>
+     <ul>
+      <li>It's very easy just fill in the form so we can call</li>
+      <li>During the call we'll require some info about the company</li>
+      <li>Don't hesitate to email us for any questions or inquiries
+      </li>
+     </ul>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 right">
+     <form action="#" method="GET">
+      <div class="name"><label for="name">
+        <input type="text" id="name" placeholder="name">
+       </label></div>
+      <div class="phone"><label for="phone">
+
+        <input type="text" id="phone" placeholder="phone">
+       </label></div>
+      <div class="email">
+       <label for="email">
+        <input type="email" id="email" placeholder="email">
+       </label>
+      </div>
+      <div class="address">
+       <label for="address">
+        <input type="text" id="address" placeholder="address">
+       </label>
+      </div>
+      <div class="agree">
+       <input type="checkbox" class="checkbox">
+       I agree with Aria's stated Privacy Policy and Terms & Conditions
+      </div>
+      <input type="submit" value="Call Me">
+     </form>
+    </div>
+
+   </div>
+  </div>
+ </section>
+ <!-- Our Team Of Consultants -->
+ <section class="our-team">
+  <div class="container">
+   <h2>Our Team Of Consultants</h2>
+   <p>We're only as strong and as knowledgeable as our team. So here are the men and women which help customers meet
+    goals and grow companies</p>
+   <div class="row">
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+     <div class="box"><img src="./images/team-1.png" class="img-responsive" alt="Responsive image"></div>
+     <p class="name">John Whitelong</p>
+     <h3>General Manager</h3>
+     <div class="contact">
+      <a href="#" class="f">
+       <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="i">
+       <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+     </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+     <div class="box"><img src="./images/team-2.png" class="img-responsive" alt="Responsive image"></div>
+     <p class="name">Veronique Smith</p>
+     <h3>Business Developer</h3>
+     <div class="contact">
+      <a href="#" class="f">
+       <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="i">
+       <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+     </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+     <div class="box"><img src="./images/team-3.png" class="img-responsive" alt="Responsive image"></div>
+     <p class="name">Chris Zimerman</p>
+     <h3>Online Marketer</h3>
+     <div class="contact">
+      <a href="#" class="f">
+       <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="i">
+       <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+     </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+     <div class="box"><img src="./images/team-4.png" class="img-responsive" alt="Responsive image"></div>
+     <p class="name">Mary Villalonga</p>
+     <h3>Community Manager
+     </h3>
+     <div class="contact">
+      <a href="#" class="f">
+       <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="i">
+       <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+ <!-- Footer -->
+ <footer>
+  <div class="container">
+   <div class="row">
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <h3>Few Words About Aria</h3>
+     <p>We're passionate about delivering the best business growth services for companies just starting out as
+      startups or industry players that have established their market position a long tima ago.</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <div class="links">
+      <h2>Links</h2>
+      <a href="">startupguide.com</a>
+      <a href="">Terms & Conditions</a>
+      <a href="">Privacy Policy</a>
+     </div>
+     <div class="links">
+      <h2>Tools</h2>
+      <a href="">businessgrowth.com</a>
+      <a href="">influencers.com
+      </a>
+      <a href="">optimizer.net</a>
+     </div>
+     <div class="links">
+      <h2>Partners</h2>
+      <a href="">unicorns.com</a>
+      <a href="">staffmanager.com
+      </a>
+      <a href="">association.gov</a>
+     </div>
+    </div>
+   </div>
+   <p class="copy-right">Copyright © Aria - More Templates xxxx - Collect from xxxx</p>
+  </div>
+ </footer>
+ <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+ <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+ <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+
+ <script src="./js/main.js"></script>
+
+ <!-- swiper 插件 -->
+ <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+ <script>
+  if (window.screen.width < 480) {
+   mySwiper = new Swiper('.swiper-container', {
+    direction: 'horizontal', // 垂直切换选项
+    loop: true, // 循环模式选项
+    autoplay: {
+     delay: 1000,
+     stopOnLastSlide: false,
+     disableOnInteraction: true,
+    },
+
+    slidesPerView: 1,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+
+    // 如果需要前进后退按钮
+    navigation: {
+     nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+    },
+
+
+   })
+  } else {
+   mySwiper = new Swiper('.swiper-container', {
+    direction: 'horizontal', // 垂直切换选项
+    loop: true, // 循环模式选项
+    autoplay: {
+     delay: 1000,
+     stopOnLastSlide: false,
+     disableOnInteraction: true,
+    },
+
+    slidesPerView: 3,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+
+    // 如果需要前进后退按钮
+    navigation: {
+     nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+    },
+
+
+   })
+  }
+ </script>
+</body>
+
+</html>

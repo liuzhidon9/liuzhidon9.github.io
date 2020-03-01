@@ -1,0 +1,474 @@
+// 共用样式
+.container() {
+	width: 1000px;
+	margin: 0 auto;
+}
+.clearfix() {
+	content: "";
+	display: block;
+	clear: both;
+}
+::selection{
+    color:white;
+    background-color:#39ae68;
+}
+
+// 头部样式
+header {
+    // background-color: rgb(240, 233, 233);
+	nav {
+		line-height: 100px;
+		.container;
+		&::after {
+			.clearfix;
+		}
+		.logo {
+			float: left;
+			height: 100px;
+			line-height: 131px;
+			span {
+				display: inline-block;
+				margin: 30px 5px 0 0;
+				width: 200px;
+				height: 55px;
+				background: url("../images/ABUIABAEGAAg_vzQ3gUox5H89AUwlwg4ygI.png")
+					no-repeat center;
+				background-size: cover;
+			}
+			h3 {
+				float: right;
+                font-size: 20px;
+               
+			}
+		}
+		ul.menu {
+			float: right;
+			> li {
+				float: left;
+				width: 120px;
+				text-align: center;
+				margin: 0 2px 0 0;
+				position: relative;
+				&:hover {
+					background-color: #fe6637;
+					a {
+						color: white;
+					}
+					.dropdown-content {
+						display: block;
+					}
+				}
+				&:first-child {
+					background-color: #fe6637;
+					a {
+						color: #fff;
+					}
+				}
+				a {
+					text-decoration: none;
+					color: #000;
+				}
+				.dropdown-content {
+					position: absolute;
+					// background-color: red;
+					display: none;
+					ul {
+						margin-top: 5px;
+						position: relative;
+						&::after {
+							content: "";
+							display: block;
+							position: absolute;
+							width: 0;
+							height: 0;
+							border: 5px solid transparent;
+							border-bottom: 5px solid #fe6637;
+							top: -10px;
+							left: 50px;
+						}
+						li {
+							width: 120px;
+							line-height: 40px;
+							color: white;
+                            background-color: #fe6637;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: #000;
+                            }
+						}
+					}
+				}
+			}
+		}
+	}
+	.banner {
+		height: 500px;
+		background: url("../images/ABUIABAEGAAgiozh3gUotpaWnAYwgA84oAY.png")
+			no-repeat center;
+		background-size: cover;
+	}
+}
+
+// 主体内容样式
+// OL 轻研系列
+section.OL {
+	padding: 30px 0;
+	.title {
+		text-align: center;
+		h3 {
+			font-size: 20px;
+			line-height: 50px;
+		}
+		p {
+			color: gray;
+			font-size: 12px;
+			margin-bottom: 30px;
+		}
+	}
+	.commodity {
+		.container;
+		ul.grid {
+			&::after {
+				.clearfix;
+			}
+			li.card {
+				float: left;
+				width: 25%;
+				// background-color: #ccc;
+				margin-top: 20px;
+				.card-content {
+					text-align: center;
+					margin: 0 25px;
+					//    background-color: skyblue;
+					img {
+					}
+					p {
+						line-height: 30px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+// 关于我们
+section.about-us {
+	background: url("../images/AD0Iu_ufBxACGAAg_trLzwUo9oWitAcwgA84oAY.jpg")
+		no-repeat center;
+	background-size: cover;
+	padding-top: 30px;
+	.title {
+		text-align: center;
+		> h3 {
+			font-size: 20px;
+			// line-height:60px;
+			color: white;
+		}
+		> p {
+			color: white;
+			font-size: 12px;
+			margin-bottom: 90px;
+			line-height: 30px;
+		}
+	}
+	ul.content {
+		.container;
+		&::after {
+			.clearfix;
+		}
+		li {
+			float: left;
+			width: 33.3%;
+			// margin-top:2px;
+			&:nth-child(2) {
+				height: 422px;
+				background: url("../images/AD0Iu_ufBxAEGAAggdvLzwUo9LOm1wYwkAM4_AM.png");
+				position: relative;
+			}
+			img {
+				width: 100%;
+				height: 422px;
+				display: block;
+				// img默认底部会有白线，把img转换为块级元素就没有了
+			}
+			h3 {
+				padding: 20px;
+				margin-top: 20px;
+				p {
+					padding: 0 20px;
+				}
+			}
+			.more {
+				width: 100px;
+				line-height: 30px;
+				text-align: center;
+				background-color: #2b2b2b;
+				position: absolute;
+				bottom: 10px;
+				right: 20px;
+				border-radius: 4px;
+				a {
+					color: white;
+					text-decoration: none;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+
+// 服务优势
+section.service {
+	padding: 30px 0;
+	.title {
+		text-align: center;
+		h3 {
+			font-size: 20px;
+			line-height: 50px;
+		}
+		p {
+			color: gray;
+			font-size: 12px;
+			margin-bottom: 30px;
+		}
+	}
+	ul.service-grid {
+		.container;
+		// padding: 0 5%;
+		box-sizing: border-box;
+		&::after {
+			.clearfix;
+		}
+		li.service-card {
+			// background-color: red;
+			float: left;
+			width: 33.3%;
+			text-align: center;
+			div.card-content {
+				margin: 0 50px;
+				padding: 20px 0;
+				img {
+					border-radius: 50%;
+					background-color: #e3393c;
+					padding: 10px;
+				}
+				h4 {
+					line-height: 30px;
+					margin-top: 30px;
+				}
+				p {
+					font-size: 12px;
+					line-height: 30px;
+					color: gray;
+				}
+			}
+		}
+	}
+}
+
+.newsbanner {
+	height: 350px;
+	background: url("../images/AD0Iu_ufBxACGAAg-NrLzwUo6eX3rQIwgA84wgM.jpg")
+		no-repeat center;
+	background-size: cover;
+}
+
+// 花果茶资讯
+section.news {
+	.news-content {
+		padding-bottom: 60px;
+		.container;
+		h3 {
+			position: relative;
+			line-height: 55px;
+			top: -55px;
+			left: 80px;
+			font-size: 20px;
+			color: white;
+		}
+		.top {
+			&::after {
+				.clearfix;
+			}
+			img {
+				float: left;
+				margin-right: 50px;
+				height: 190px;
+			}
+			.intro {
+				float: left;
+				h4 {
+					line-height: 30px;
+				}
+				p {
+					font-size: 14px;
+					line-height: 20px;
+					color: gray;
+				}
+				ul.list {
+					margin-left: 20px;
+					list-style: disc;
+					margin-top: 50px;
+					li {
+						line-height: 30px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		ul.news-grid {
+			margin-top: 30px;
+			&::after {
+				.clearfix;
+			}
+			li {
+				float: left;
+				width: 25%;
+				// // &:first-child{
+				// //     .photo{
+				// //         margin:0 20px 0 0;
+				// //     }
+
+				// // }
+				// // &:last-child{
+				// //     .photo{
+				// //          margin:0 0 0 20px;
+				// //     }
+
+				// }
+				.photo {
+					margin: 0 10px;
+					img {
+						display: block;
+
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 页脚样式
+footer {
+	.find-us {
+		background-color: #2b2b2b;
+        padding: 30px 0;
+        text-align:center;
+		>ul {
+            background-color: red;
+            // padding-bottom:10px;
+            background: url("../images/AD0Iu_ufBxAEGAAgmdvLzwUo8PeZ3wMwhgg4Hg.png") no-repeat center bottom;
+			&::after {
+				.clearfix;
+			}
+			text-align: center;
+			li {
+				display: inline-block;
+				vertical-align: top;
+                margin-right: 100px;
+                margin-bottom:30px;
+				&:nth-child(1) {
+					span {
+						background: url("../images/AD0Iu_ufBxAEGAAg6drLzwUojPKl6gcwMjgy.png")
+							no-repeat 3px -3px;
+					}
+				}
+				&:nth-child(2) {
+                    span{
+                        background: url("../images/AD0Iu_ufBxAEGAAg7drLzwUotoT08wQwMjgy.png")
+						no-repeat -3px -3px;
+                    }
+					
+                }
+                &:nth-child(3) {
+                    span{
+                        background: url("../images/AD0Iu_ufBxAEGAAg8NrLzwUortDrqwUwMjgy.png")
+						no-repeat -4px -3px;
+                    }
+					
+				}
+				div.logo {
+					float: left;
+					font-size: 0;
+					span {
+						display: inline-block;
+						width: 40px;
+						height: 40px;
+					}
+					i {
+						display: inline-block;
+						margin: 0 10px;
+						width: 5px;
+						height: 31px;
+						line-height: 40px;
+						background: url("../images/AD0Iu_ufBxAEGAAgmtvLzwUo_LmkqQcwHjgf.png")
+							no-repeat -13px 0;
+					}
+				}
+
+				p {
+					float: left;
+					margin-top: 5px;
+					display: inline-block;
+					color: white;
+					font-size: 12px;
+					line-height: 1.5em;
+					text-align: left;
+				}
+			}
+        }
+         .footer-nav{
+        ul{
+           
+            li{
+                display: inline-block;
+                &:last-child{
+                    &::after{
+                        content:"";
+                        
+                    }
+                }
+                &::after{
+                    content:"|";
+                    display: inline-block;
+                    color:#ccc;
+                    margin:0 30px;
+                    font-size:12px;
+                }
+                a{
+                    text-decoration: none;
+                    color:#ccc;
+                    // border-right:2px solid #ccc;
+                    font-size:12px;
+                }
+            }
+        }
+    }
+    }
+    .copyright{
+        background-color: #232524;
+        text-align:center;
+        font-size:12px;
+        color:white;
+        padding:20px 0 40px;
+        line-height: 2em;
+        p{
+            
+            a{
+                text-decoration: none;
+                font-size:12px;
+                color:white;
+            }
+            i{
+                display:inline-block;
+                width:17px;
+                height:17px;
+                background: url("../images/fkicon.png") no-repeat center;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+        }
+    }
+   
+}

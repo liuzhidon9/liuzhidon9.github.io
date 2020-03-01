@@ -1,0 +1,58 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.stage {
+  width: 200%;
+  height: 100%;
+  background-color: red;
+  margin-left: 0;
+  transition: all 0.5s;
+}
+.stage .game-start {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: green;
+  background: url("../images/background-start.png") no-repeat center;
+  background-size: cover;
+}
+.stage .game-start button.start {
+  width: 160px;
+  line-height: 36px;
+  border-radius: 36px;
+  outline: none;
+  border: none;
+  margin-left: -80px;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  font-size: 24px;
+  color: dimgray;
+  font-weight: bold;
+  background-color: #c4c9ca;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+  box-shadow: 1px 1px 5px #000000;
+}
+.stage .sceneGame {
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-color: pink;
+  background: url("../images/background-game.png") no-repeat center;
+  background-position-y: 0px;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+.stage .sceneGame img {
+  position: absolute;
+}
+/*# sourceMappingURL=./style.css.map */

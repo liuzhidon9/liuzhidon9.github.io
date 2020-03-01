@@ -1,0 +1,405 @@
+::selection {
+  color: white;
+  background-color: #39ae68;
+}
+header nav {
+  line-height: 100px;
+  width: 1000px;
+  margin: 0 auto;
+}
+header nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+header nav .logo {
+  float: left;
+  height: 100px;
+  line-height: 131px;
+}
+header nav .logo span {
+  display: inline-block;
+  margin: 30px 5px 0 0;
+  width: 200px;
+  height: 55px;
+  background: url("../images/ABUIABAEGAAg_vzQ3gUox5H89AUwlwg4ygI.png") no-repeat center;
+  background-size: cover;
+}
+header nav .logo h3 {
+  float: right;
+  font-size: 20px;
+}
+header nav ul.menu {
+  float: right;
+}
+header nav ul.menu > li {
+  float: left;
+  width: 120px;
+  text-align: center;
+  margin: 0 2px 0 0;
+  position: relative;
+}
+header nav ul.menu > li:hover {
+  background-color: #fe6637;
+}
+header nav ul.menu > li:hover a {
+  color: white;
+}
+header nav ul.menu > li:hover .dropdown-content {
+  display: block;
+}
+header nav ul.menu > li:first-child {
+  background-color: #fe6637;
+}
+header nav ul.menu > li:first-child a {
+  color: #fff;
+}
+header nav ul.menu > li a {
+  text-decoration: none;
+  color: #000;
+}
+header nav ul.menu > li .dropdown-content {
+  position: absolute;
+  display: none;
+}
+header nav ul.menu > li .dropdown-content ul {
+  margin-top: 5px;
+  position: relative;
+}
+header nav ul.menu > li .dropdown-content ul::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #fe6637;
+  top: -10px;
+  left: 50px;
+}
+header nav ul.menu > li .dropdown-content ul li {
+  width: 120px;
+  line-height: 40px;
+  color: white;
+  background-color: #fe6637;
+  cursor: pointer;
+}
+header nav ul.menu > li .dropdown-content ul li:hover {
+  background-color: #000;
+}
+header .banner {
+  height: 500px;
+  background: url("../images/ABUIABAEGAAgiozh3gUotpaWnAYwgA84oAY.png") no-repeat center;
+  background-size: cover;
+}
+section.OL {
+  padding: 30px 0;
+}
+section.OL .title {
+  text-align: center;
+}
+section.OL .title h3 {
+  font-size: 20px;
+  line-height: 50px;
+}
+section.OL .title p {
+  color: gray;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+section.OL .commodity {
+  width: 1000px;
+  margin: 0 auto;
+}
+section.OL .commodity ul.grid::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section.OL .commodity ul.grid li.card {
+  float: left;
+  width: 25%;
+  margin-top: 20px;
+}
+section.OL .commodity ul.grid li.card .card-content {
+  text-align: center;
+  margin: 0 25px;
+}
+section.OL .commodity ul.grid li.card .card-content p {
+  line-height: 30px;
+  font-size: 14px;
+}
+section.about-us {
+  background: url("../images/AD0Iu_ufBxACGAAg_trLzwUo9oWitAcwgA84oAY.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 30px;
+}
+section.about-us .title {
+  text-align: center;
+}
+section.about-us .title > h3 {
+  font-size: 20px;
+  color: white;
+}
+section.about-us .title > p {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 90px;
+  line-height: 30px;
+}
+section.about-us ul.content {
+  width: 1000px;
+  margin: 0 auto;
+}
+section.about-us ul.content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section.about-us ul.content li {
+  float: left;
+  width: 33.3%;
+}
+section.about-us ul.content li:nth-child(2) {
+  height: 422px;
+  background: url("../images/AD0Iu_ufBxAEGAAggdvLzwUo9LOm1wYwkAM4_AM.png");
+  position: relative;
+}
+section.about-us ul.content li img {
+  width: 100%;
+  height: 422px;
+  display: block;
+}
+section.about-us ul.content li h3 {
+  padding: 20px;
+  margin-top: 20px;
+}
+section.about-us ul.content li h3 p {
+  padding: 0 20px;
+}
+section.about-us ul.content li .more {
+  width: 100px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #2b2b2b;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 4px;
+}
+section.about-us ul.content li .more a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+section.service {
+  padding: 30px 0;
+}
+section.service .title {
+  text-align: center;
+}
+section.service .title h3 {
+  font-size: 20px;
+  line-height: 50px;
+}
+section.service .title p {
+  color: gray;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+section.service ul.service-grid {
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+section.service ul.service-grid::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section.service ul.service-grid li.service-card {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+section.service ul.service-grid li.service-card div.card-content {
+  margin: 0 50px;
+  padding: 20px 0;
+}
+section.service ul.service-grid li.service-card div.card-content img {
+  border-radius: 50%;
+  background-color: #e3393c;
+  padding: 10px;
+}
+section.service ul.service-grid li.service-card div.card-content h4 {
+  line-height: 30px;
+  margin-top: 30px;
+}
+section.service ul.service-grid li.service-card div.card-content p {
+  font-size: 12px;
+  line-height: 30px;
+  color: gray;
+}
+.newsbanner {
+  height: 350px;
+  background: url("../images/AD0Iu_ufBxACGAAg-NrLzwUo6eX3rQIwgA84wgM.jpg") no-repeat center;
+  background-size: cover;
+}
+section.news .news-content {
+  padding-bottom: 60px;
+  width: 1000px;
+  margin: 0 auto;
+}
+section.news .news-content h3 {
+  position: relative;
+  line-height: 55px;
+  top: -55px;
+  left: 80px;
+  font-size: 20px;
+  color: white;
+}
+section.news .news-content .top::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section.news .news-content .top img {
+  float: left;
+  margin-right: 50px;
+  height: 190px;
+}
+section.news .news-content .top .intro {
+  float: left;
+}
+section.news .news-content .top .intro h4 {
+  line-height: 30px;
+}
+section.news .news-content .top .intro p {
+  font-size: 14px;
+  line-height: 20px;
+  color: gray;
+}
+section.news .news-content .top .intro ul.list {
+  margin-left: 20px;
+  list-style: disc;
+  margin-top: 50px;
+}
+section.news .news-content .top .intro ul.list li {
+  line-height: 30px;
+  font-size: 14px;
+}
+section.news .news-content ul.news-grid {
+  margin-top: 30px;
+}
+section.news .news-content ul.news-grid::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section.news .news-content ul.news-grid li {
+  float: left;
+  width: 25%;
+}
+section.news .news-content ul.news-grid li .photo {
+  margin: 0 10px;
+}
+section.news .news-content ul.news-grid li .photo img {
+  display: block;
+  width: 100%;
+}
+footer .find-us {
+  background-color: #2b2b2b;
+  padding: 30px 0;
+  text-align: center;
+}
+footer .find-us > ul {
+  background-color: red;
+  background: url("../images/AD0Iu_ufBxAEGAAgmdvLzwUo8PeZ3wMwhgg4Hg.png") no-repeat center bottom;
+  text-align: center;
+}
+footer .find-us > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+footer .find-us > ul li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 100px;
+  margin-bottom: 30px;
+}
+footer .find-us > ul li:nth-child(1) span {
+  background: url("../images/AD0Iu_ufBxAEGAAg6drLzwUojPKl6gcwMjgy.png") no-repeat 3px -3px;
+}
+footer .find-us > ul li:nth-child(2) span {
+  background: url("../images/AD0Iu_ufBxAEGAAg7drLzwUotoT08wQwMjgy.png") no-repeat -3px -3px;
+}
+footer .find-us > ul li:nth-child(3) span {
+  background: url("../images/AD0Iu_ufBxAEGAAg8NrLzwUortDrqwUwMjgy.png") no-repeat -4px -3px;
+}
+footer .find-us > ul li div.logo {
+  float: left;
+  font-size: 0;
+}
+footer .find-us > ul li div.logo span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+footer .find-us > ul li div.logo i {
+  display: inline-block;
+  margin: 0 10px;
+  width: 5px;
+  height: 31px;
+  line-height: 40px;
+  background: url("../images/AD0Iu_ufBxAEGAAgmtvLzwUo_LmkqQcwHjgf.png") no-repeat -13px 0;
+}
+footer .find-us > ul li p {
+  float: left;
+  margin-top: 5px;
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  line-height: 1.5em;
+  text-align: left;
+}
+footer .find-us .footer-nav ul li {
+  display: inline-block;
+}
+footer .find-us .footer-nav ul li:last-child::after {
+  content: "";
+}
+footer .find-us .footer-nav ul li::after {
+  content: "|";
+  display: inline-block;
+  color: #ccc;
+  margin: 0 30px;
+  font-size: 12px;
+}
+footer .find-us .footer-nav ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 12px;
+}
+footer .copyright {
+  background-color: #232524;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  padding: 20px 0 40px;
+  line-height: 2em;
+}
+footer .copyright p a {
+  text-decoration: none;
+  font-size: 12px;
+  color: white;
+}
+footer .copyright p i {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url("../images/fkicon.png") no-repeat center;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+/*# sourceMappingURL=./style.css.map */

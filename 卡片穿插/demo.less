@@ -1,0 +1,89 @@
+body {
+ margin: 0;
+ padding: 0;
+}
+
+// 清除浮动
+// 这个是hack写法，用来识别不同版本的IE浏览器。
+// *后面的属性 IE6 IE7能识别，IE8 IE9……都不能识别；
+// "_"后面的属性，只有IE6能识别，其他版本（IE7 8 9 更高级别）都不能识别
+.clearfix {
+ display: block;
+ *zoom: 1;
+
+ &::after {
+  content: '';
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+ }
+
+}
+
+// 版心 居中
+.container {
+ width: 90%;
+ margin: 0 auto;
+}
+
+.row {
+ .clearfix;
+}
+
+div[class*=col-] {
+ float: left;
+ padding:0 15px;
+ box-sizing: border-box;
+}
+
+
+// 变量
+@sm: 768px;
+@md: 992px;
+@lg: 1200px;
+
+
+
+// 栅格系统 百分比
+// .create-grid(@n, @i: 1) when (@i<=@n) {
+//  .col-xs-@{i} {
+//   width: (@i*100%/@n);
+//  }
+
+//  .create-grid(@n, @i+1)
+// }
+
+// .create-grid(12);
+
+.make-grid(@screen, @colNum) {
+ .create-grid(@colNum, @i: 1) when (@i<=@colNum) {
+  .col-@{screen}-@{i} {
+   width: (@i*100%/@colNum);
+  }
+  // 递归 自己调用自己
+  .create-grid(@colNum, @i+1)
+ }
+
+ .create-grid(@colNum)
+}
+
+// 默认xs
+.make-grid(xs,12);
+
+// 媒体查询
+@media screen and (min-width:@sm) {
+ .make-grid(sm, 12);
+ .container {
+  width: 80%;
+  margin: 0 auto;
+ }
+}
+@media screen and (min-width:@md) {
+ .make-grid(md, 12)
+}
+@media screen and (min-width:@lg) {
+ .make-grid(lg, 12)
+}
+

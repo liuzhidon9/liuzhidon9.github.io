@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ <title>Document</title>
+ <link rel="stylesheet" href="player.css" />
+ <style></style>
+</head>
+
+<body>
+ <div class="player">
+  <audio src=""></audio>
+  <header>
+   <div class="song-info">
+    <p class="name-info">
+     <span class="name">Name</span>
+     <span class="author">Author</span>
+    </p>
+    <div class="progress">
+     <input type="range" class="songs-progress" min='0' max='100' step="1" value="0">
+     <span class="play-progress"><i class="circle"></i></span>
+    </div>
+    <div class="time">
+     <div class="has-play">
+      <span class="minute">00 </span>:<span class="second">0</span>
+     </div>
+     <div class="time-length">
+      <span class="minute">00 </span>:<span class="second">0</span>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="main">
+   <ul class="song-list">
+    <!-- <li><img class="song-cover" src="images/01.jpg">
+       <p class="name-info"><span class="name">Name</span>
+        <span class="author">Author</span>
+       </p>
+      </li>
+      <li><img class="song-cover" src="images/01.jpg">
+       <p class="name-info"><span class="name">Name</span>
+        <span class="author">Author</span>
+       </p>
+      </li>
+      <li><img class="song-cover" src="images/01.jpg">
+       <p class="name-info"><span class="name">Name</span>
+        <span class="author">Author</span>
+       </p>
+      </li> -->
+    <!-- <li></li>
+         <li></li> -->
+   </ul>
+  </div>
+
+  <footer>
+   <div class="prev">
+    <div class="button"></div>
+   </div>
+   <div class="pause-play">
+    <div class="button"></div>
+   </div>
+   <div class="next">
+    <div class="button"></div>
+   </div>
+  </footer>
+ </div>
+
+ <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+
+ <script>
+  var current = 0;
+  var canPlay = 0;
+  var id;
+  var id2
+  var i = 0
+
+  function myplayer(data) {
+   // console.log(data)
+   // 歌曲列表
+   $(data.playlist).each(function (i, e) {
+    $(".song-list").append(
+     '<li><img class="song-cover" src="' +
+     e.thumb +
+     '"> <p class="name-info"><span class="name">' +
+     e.trackName +
+     '</span><span class="author">' +
+     e.trackArtist +
+     "</span></p>"
+    );
+    // console.log($('.song-list li'))
+   });
+
+   function init(data) {
+    console.log(data);
+    // 初始化激活歌曲
+    $(".song-list li")
+     .eq(current)
+     .addClass("active")
+     .siblings()
+     .removeClass("active");
+    var songs = data.playlist[current];
+    $("audio").attr({
+     src: songs.file,
+
+    });
+    $("header .song-info").css(
+     "background",
+     "url(" + songs.thumb + ") no-repeat center"
+    );
+    $("header .name-info span")
+     .eq(0)
+     .text(songs.trackName)
+     .end()
+     .eq(1)
+     .text(songs.trackArtist);
+
+
+    setTimeout(function () {
+     // console.log($("audio")[0].duration)
+     // 按钮初始化
+     if ($("audio")[0].paused == true) {
+
+      $('.pause-play').addClass('active')
+
+     } else {
+      $('.pause-play').removeClass('active')
+     }
+
+     if ($("audio")[0].paused == false) {
+       $("ul.song-list li").eq(current).addClass('playing').removeClass('paused').siblings().addClass('paused')
+     }
+
+     canPlay =
+      $(".progress").width() / $("audio")[0].duration;
+     // 初始化时间
+     songsTime = $("audio")[0].duration;
+     var minute = parseInt(songsTime / 60);
+     initTime();
+     // 总时长
+     $('.time-length .second').text(parseInt(songsTime % 60))
+     $('.time-length .minute').text(minute)
+
+     // 歌曲进度条
+     //  $(".progress .play-progress").animate({
+     //   width: $("audio")[0].currentTime * canPlay + "px"
+     //  });
+     id = setInterval(function () {
+      
+      
+       $(".progress .play-progress").css({
+         'width': $("audio")[0].currentTime / songsTime * 100 + "%",
+         'transition': 'none'
+        }
+
+       );
+      
+     }, 30);
+    }, 100);
+   }
+   init(data);
+   // 初始化时间
+   function initTime() {
+    id2 = setInterval(function () {
+    
+     if (parseInt($("audio")[0].currentTime) < 10) {
+      $('.has-play .second').text("0" + parseInt($("audio")[0].currentTime));
+     } else if (parseInt($("audio")[0].currentTime) >= 60) {
+      i++
+      $('.has-play .second').text('00')
+      $('.has-play .minute').text(i)
+     } else {
+      $('.has-play .second').text(parseInt($("audio")[0].currentTime));
+
+     }
+    }, 100, parseInt($("audio")[0].currentTime))
+
+   }
+
+   //  旋转当前播放歌曲图片
+   // function rotatePlay{
+   //   if ($("audio")[0].paused == true) {
+
+   //   } else {
+
+
+   //   }
+   // }
+
+   // 清空时间
+   function clearTime() {
+    $('.has-play .second').text('00')
+   }
+   // 列表点击播放
+   $(".song-list li").on("click", function () {
+    // console.log($(this).index())
+    $(this)
+     .addClass("active")
+     .siblings()
+     .removeClass("active");
+    current = $(this).index();
+    clearInterval(id);
+    clearInterval(id2);
+    init(data);
+    $("audio")[0].play();
+    clearTime()
+   });
+
+   // 歌曲切换
+   function switchSongs() {
+    clearInterval(id);
+    clearInterval(id2);
+    init(data);
+    clearTime()
+   }
+   // 上一首
+   $("footer .prev").click(function () {
+    current--;
+    if (current < 0) {
+     current = $(".song-list li").length - 1;
+    }
+
+    switchSongs();
+    $("audio")[0].play();
+   });
+
+   // 下一首
+   $("footer .next").click(function () {
+    current++;
+    if (current > $(".song-list li").length - 1) {
+     current = 0;
+    }
+    switchSongs();
+    $("audio")[0].play();
+   });
+
+   // 暂停、继续
+   $("footer .pause-play ").click(function () {
+    // console.log('xxx')
+    if ($("audio")[0].paused == true) {
+     $("audio")[0].play();
+     $('.pause-play').removeClass('active')
+     initTime()
+     $("ul.song-list li").eq(current).removeClass('paused')
+     
+    } else {
+     $("audio")[0].pause();
+     $('.pause-play').addClass('active')
+     clearInterval(id2)
+     
+     $("ul.song-list li").eq(current).addClass('paused')
+    }
+    // switchSongs()
+   });
+  }
+
+
+  // 拖动进度条
+  $('input.songs-progress').on('input', function (e) {
+   e.preventDefault()
+   $("audio")[0].currentTime = $(this).val() / 100 * $("audio")[0].duration
+   console.log($(this).val())
+   // $(".progress .play-progress").css({
+   //  'width': $(this).val() / 100 + '%'
+   // })
+
+  })
+ </script>
+ <script src="music.js"></script>
+</body>
+
+</html>

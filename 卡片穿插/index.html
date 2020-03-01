@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+ <link rel="stylesheet" href="./demo.css">
+ <style>
+  body {
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   width: 100%;
+   background: url('./images/background.jpg');
+   display: flex;
+   align-items: center;
+  }
+
+  .stage {
+   /* display: flex;
+      justify-content: space-around; */
+  }
+
+  .stage .card {
+   /* width: 250px;
+      height: 300px; */
+   /* transform-style: preserve-3d; */
+
+  }
+
+  .stage .card .content {
+   position: relative;
+   width: 100%;
+   /* background-color: pink; */
+   height: 300px;
+   transform-style: preserve-3d;
+   perspective: 1000px;
+   perspective-origin: 50% 50%;
+
+  }
+
+
+  .stage .card .img,
+  .stage .card .info {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+
+  }
+
+  .stage .card .img {
+   transform: rotateY(0);
+   /* transition-delay: 0.3s; */
+   transition: all 0.5s ease-in-out;
+  }
+
+  .stage .card:nth-child(1) .img {
+   background: url('./images/1.jpg') no-repeat center;
+   background-size: cover;
+  }
+
+  .stage .card:nth-child(2) .img {
+   background: url('./images/2.jpg') no-repeat center;
+   background-size: cover;
+  }
+
+  .stage .card:nth-child(3) .img {
+   background: url('./images/3.jpg') no-repeat center;
+   background-size: cover;
+   /* transform: rotateY(10deg); */
+  }
+
+  .stage .card .info {
+   background: rgba(0, 0, 0, 0.712);
+   transform: rotateY(90deg);
+   /* opacity: 0; */
+   visibility: hidden;
+   transition: all 0.5s ease-in-out;
+   z-index: 2;
+   color: white;
+   text-align: center;
+   /* display: flex; */
+   /* align-items: center; */
+   display: flex;
+   flex-direction: column;
+   /* align-content: center; */
+   justify-content: center;
+   padding: 0 15px;
+   box-sizing: border-box;
+  }
+
+  .stage .card .info h3 {
+   margin: 0;
+  }
+
+  .stage .card .info p {
+   /* border-top:1px solid white; */
+   font-size: 14px;
+   line-height: 2em;
+   margin-top: 0;
+  }
+
+  .stage .card .info p::after {
+   content: '';
+   display: block;
+   width: 80%;
+   border-bottom: 1px solid white;
+   margin: 10px 10%;
+  }
+
+  .stage .card .info p::before {
+   content: '';
+   display: block;
+   width: 80%;
+   border-top: 1px solid white;
+   margin: 10px 10% 20px;
+  }
+
+  .stage .card .content:hover .info {
+   /* opacity: 1; */
+   visibility: visible;
+   transform: rotateY(0);
+  }
+
+  .stage .card .content:hover .img {
+   transform: rotateY(-90deg);
+  }
+ </style>
+</head>
+
+<body>
+ <div class="container">
+  <div class="stage row">
+   <div class="col-xs-12 col-sm-4 card">
+    <div class="content">
+     <div class="img"></div>
+     <div class="info">
+      <h3>DUENDE</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit
+       amet, consectetur adipiscing elit. Nunc sed vestibulum.</p>
+     </div>
+    </div>
+   </div>
+   <div class="col-xs-12 col-sm-4 card">
+    <div class="content">
+
+     <div class="img"></div>
+     <div class="info">
+      <h3>SCHADENFREUDE</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit
+       amet, consectetur adipiscing elit. Nunc sed vestibulum.</p>
+     </div>
+    </div>
+   </div>
+   <div class="col-xs-12 col-sm-4 card">
+    <div class="content">
+     <div class="img"></div>
+     <div class="info">
+      <h3>CAFUNE</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit
+       amet, consectetur adipiscing elit. Nunc sed vestibulum.</p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</body>
+
+</html>

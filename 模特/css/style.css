@@ -1,0 +1,751 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navg {
+  margin-bottom: 0;
+}
+.navg .container-fluid .navbar-header a.navbar-brand {
+  line-height: 60px;
+  padding: 0;
+  color: #FC427B;
+  font-family: "Srisakdi", cursive;
+}
+.navg .container-fluid .navbar-header button.navbar-toggle {
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+}
+.navg .container-fluid .navbar-collapse .navbar-nav a {
+  text-align: center;
+  line-height: 60px;
+  padding: 0;
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.navg .container-fluid .navbar-collapse .navbar-nav a.active {
+  color: #FC427B;
+}
+.navg .container-fluid .navbar-collapse .navbar-nav a:hover {
+  color: #FC427B;
+}
+.navg .container-fluid .navbar-collapse .navbar-nav li ul.dropdown-menu a {
+  text-align: center;
+}
+.carousel ol.carousel-indicators li {
+  margin: 0 4px;
+  width: 15px;
+  height: 15px;
+  background-color: #FC427B;
+  border: 3px solid white;
+}
+.carousel ol.carousel-indicators li.active {
+  background-color: white;
+}
+.carousel ol.carousel-indicators li:hover {
+  background-color: white;
+}
+.carousel .carousel-inner .item {
+  height: 340px;
+}
+.carousel .carousel-inner .item:nth-child(1) {
+  background: url('../images/2.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.carousel .carousel-inner .item:nth-child(2) {
+  background: url('../images/1.jpg') no-repeat center;
+  background-size: cover;
+}
+.carousel .carousel-inner .item:nth-child(3) {
+  background: url('../images/4.jpg') no-repeat center;
+  background-size: cover;
+}
+.carousel .carousel-inner .item .carousel-caption {
+  right: 0;
+  left: 0;
+  top: 80px;
+  text-align: right;
+}
+.carousel .carousel-inner .item .carousel-caption h5 {
+  font-size: 14px;
+  color: #333;
+}
+.carousel .carousel-inner .item .carousel-caption h3 {
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 1.3em;
+}
+.carousel .carousel-inner .item .carousel-caption button {
+  margin-top: 10px;
+  background-color: #FC427B;
+  color: white;
+}
+.wellcome .container p.title {
+  font-size: 28px;
+  font-weight: 100;
+  color: #333;
+  letter-spacing: 1px;
+  letter-spacing: 0.1em;
+  margin-top: 30px;
+}
+.wellcome .container em {
+  font-size: 20px;
+  line-height: 1.5em;
+}
+.wellcome .container span.glyphicon {
+  margin-top: 30px;
+  background-color: #FC427B;
+  color: white;
+  padding: 30px;
+  font-size: 30px;
+  border-radius: 50%;
+}
+.wellcome .container h3 {
+  margin: 20px 0;
+}
+.section {
+  padding: 50px 0;
+  background: #FC427B;
+  color: white;
+  text-align: center;
+}
+.section span {
+  margin-top: 20px;
+  font-size: 36px;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 50%;
+  color: white;
+}
+.section h3 {
+  margin-top: 30px;
+  line-height: 50px;
+  font-weight: 600;
+}
+.section p {
+  letter-spacing: 0.1em;
+  line-height: 2em;
+}
+section.blog {
+  padding: 40px 0;
+}
+section.blog .container .blog-title {
+  text-align: center;
+}
+section.blog .container .blog-title h3 {
+  line-height: 50px;
+  font-weight: 500;
+  font-size: 30px;
+}
+section.blog .container .blog-title p {
+  margin-bottom: 40px;
+  color: #999;
+  word-spacing: 0.2em;
+  letter-spacing: 0.1em;
+}
+section.blog .container div[class^=col] .img-box {
+  position: relative;
+}
+section.blog .container div[class^=col] .img-box h3 {
+  line-height: 26px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #38d2fe;
+  padding: 10px 25px;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+}
+section.blog .container div[class^=col] .img-box h3 span {
+  display: block;
+  font-size: 18px;
+  font-weight: 100;
+}
+section.blog .container div[class^=col] h3 {
+  line-height: 40px;
+  margin-top: 10px;
+}
+section.blog .container div[class^=col] .likes {
+  line-height: 40px;
+}
+section.blog .container div[class^=col] .likes a {
+  color: #999;
+}
+section.blog .container div[class^=col] .likes a i {
+  color: #FC427B;
+}
+section.blog .container div[class^=col] .likes a:nth-child(2) {
+  margin-left: 5px;
+}
+section.blog .container div[class^=col] P {
+  color: #999;
+  line-height: 2em;
+  font-size: 14px;
+  font-weight: 400;
+}
+.beauty {
+  height: 300px;
+  background: url('../images/bg2.jpg') no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.beauty .container {
+  color: white;
+}
+.beauty .container .row h4 {
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 24px;
+  font-weight: 600;
+}
+.beauty .container .row h3 {
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 40px;
+  margin: 10px 0;
+}
+.beauty .container .row p {
+  letter-spacing: 0.1em;
+}
+section.gallery {
+  padding: 60px 0;
+}
+section.gallery .container .gallery-title {
+  text-align: center;
+}
+section.gallery .container .gallery-title h3 {
+  line-height: 50px;
+  font-weight: 500;
+  font-size: 30px;
+}
+section.gallery .container .gallery-title p {
+  margin-bottom: 40px;
+  color: #999;
+  word-spacing: 0.2em;
+  letter-spacing: 0.1em;
+}
+section.gallery .container .row {
+  padding: 0 5px;
+}
+section.gallery .container .row div[class^=col] {
+  margin-top: 15px;
+}
+section.gallery .container .row div[class^=col] img {
+  border-radius: 5px;
+}
+section.gallery .container .row .col-xs-6 {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.modal .modal-dialog .modal-content .modal-header {
+  border: none;
+  padding-bottom: 0;
+}
+.modal .modal-dialog .modal-content .modal-header button.close {
+  opacity: 1;
+  outline: none;
+}
+.modal .modal-dialog .modal-content .modal-header button.close span {
+  font-size: 34px;
+  color: #FC427B;
+}
+.modal .modal-dialog .modal-content .modal-body {
+  padding: 20px 20px 5px;
+}
+.modal .modal-dialog .modal-content .modal-body img {
+  width: 100%;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+.modal .modal-dialog .modal-content .switch {
+  overflow: hidden;
+  text-align: center;
+}
+.modal .modal-dialog .modal-content .switch span {
+  background-color: white;
+  padding: 10px 10px;
+  margin: 0 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #FC427B;
+}
+.modal .modal-dialog .modal-content .switch .prev {
+  float: left;
+}
+.modal .modal-dialog .modal-content .switch .next {
+  float: right;
+}
+section.newsletter {
+  padding: 50px 0;
+  background: url('../images/bg3.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+section.newsletter .container {
+  color: white;
+  text-align: center;
+}
+section.newsletter .container h2 {
+  font-weight: 600;
+}
+section.newsletter .container p {
+  line-height: 60px;
+  letter-spacing: 0.1em;
+}
+section.newsletter .container form div[class^=col] {
+  position: relative;
+}
+section.newsletter .container form div[class^=col] .form-group {
+  margin-bottom: 0;
+}
+section.newsletter .container form div[class^=col] .form-group label {
+  display: inline;
+}
+section.newsletter .container form div[class^=col] .form-group input {
+  margin-bottom: 15px;
+  height: 50px;
+  padding-left: 15px;
+}
+section.newsletter .container form div[class^=col] button.btn {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #38d2fe;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+section.contact-us {
+  padding: 40px 0 200px;
+}
+section.contact-us .container .title {
+  text-align: center;
+}
+section.contact-us .container .title h3 {
+  line-height: 50px;
+  font-weight: 500;
+  font-size: 30px;
+}
+section.contact-us .container .title p {
+  margin-bottom: 40px;
+  color: #999;
+  word-spacing: 0.2em;
+  letter-spacing: 0.1em;
+}
+section.contact-us .container .row div[class^=col] .jumbotron {
+  padding: 20px 40px 20px 40px ;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+section.contact-us .container .row div[class^=col] .jumbotron h1 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 60px;
+  color: #38d2fe;
+}
+section.contact-us .container .row div[class^=col] .jumbotron p {
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+  line-height: 25px;
+}
+section.contact-us .container .row div[class^=col] form {
+  padding: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+section.contact-us .container .row div[class^=col] form h3 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 60px;
+  color: #38d2fe;
+}
+section.contact-us .container .row div[class^=col] form .form-group {
+  border: none;
+  border-bottom: 1px solid #999;
+}
+section.contact-us .container .row div[class^=col] form .form-group .form-control {
+  padding: 20px;
+  outline: none;
+  border: none;
+  border-radius: none;
+}
+section.contact-us .container .row div[class^=col] form button.btn {
+  width: 100%;
+  background-color: #FC427B;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  margin: 20px 0;
+}
+footer {
+  background-color: #212020;
+  padding: 30px 0;
+}
+footer .container {
+  text-align: center;
+}
+footer .container .row div[class^=col] {
+  color: white;
+}
+footer .container .row div[class^=col] h3 {
+  line-height: 80px;
+  font-weight: 400;
+  font-size: 20px;
+}
+footer .container .row div[class^=col] p {
+  color: #999;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+}
+footer .container .row div[class^=col] ul.news-list h5,
+footer .container .row div[class^=col] ul.contact-list h5 {
+  font-size: 16px;
+}
+footer .container .row div[class^=col] ul.news-list p,
+footer .container .row div[class^=col] ul.contact-list p {
+  line-height: 35px;
+  margin-bottom: 15px;
+}
+footer .container .row div[class^=col] ul.foot-nav li {
+  margin-bottom: 10px;
+}
+footer .container .row div[class^=col] ul.foot-nav li a {
+  text-decoration: none;
+  color: #ababab;
+  font-size: 18px;
+}
+footer .container .row div[class^=col] ul.foot-nav li a:hover {
+  color: white;
+}
+footer .container-fluid {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  border-top: 1px solid #999;
+}
+footer .container-fluid a.back {
+  display: inline-block;
+  margin-top: 10px;
+  width: 40px;
+  height: 50px;
+  background: url('../images/move-top.png') no-repeat center;
+}
+footer .container-fluid p {
+  line-height: 30px;
+  color: #999;
+  font-size: 12px;
+}
+/* 超小屏幕（手机，小于 768px） */
+/* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) {
+  .navg {
+    margin-bottom: 0;
+  }
+  .navg .container-fluid .navbar-header a.navbar-brand {
+    margin-left: 50px;
+    color: #FC427B;
+    font-family: "Srisakdi", cursive;
+  }
+  .navg .container-fluid .navbar-header button.navbar-toggle {
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+  }
+  .navg .container-fluid .navbar-collapse .navbar-nav a {
+    line-height: 60px;
+    padding: 0;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .navg .container-fluid .navbar-collapse .navbar-nav a.active {
+    color: #FC427B;
+  }
+  .navg .container-fluid .navbar-collapse .navbar-nav a:hover {
+    color: #FC427B;
+  }
+  .navg .container-fluid .navbar-collapse .navbar-nav li ul.dropdown-menu a {
+    text-align: left;
+  }
+  .carousel ol.carousel-indicators li {
+    margin: 0 4px;
+    width: 20px;
+    height: 20px;
+    background-color: #FC427B;
+    border: 3px solid white;
+  }
+  .carousel ol.carousel-indicators li.active {
+    background-color: white;
+  }
+  .carousel ol.carousel-indicators li:hover {
+    background-color: white;
+  }
+  .carousel .carousel-inner .item {
+    height: 600px;
+  }
+  .carousel .carousel-inner .item .carousel-caption {
+    right: 0;
+    left: 0;
+    top: 150px;
+    text-align: right;
+  }
+  .carousel .carousel-inner .item .carousel-caption h5 {
+    font-size: 18px;
+    color: #333;
+  }
+  .carousel .carousel-inner .item .carousel-caption h3 {
+    font-size: 48px;
+    font-weight: bolder;
+    line-height: 1.3em;
+  }
+  .carousel .carousel-inner .item .carousel-caption button {
+    margin-top: 30px;
+    background-color: #FC427B;
+    color: white;
+  }
+  .wellcome .container p.title {
+    margin-top: 80px;
+    font-size: 34px;
+    font-weight: 100;
+    color: #333;
+    letter-spacing: 1px;
+    letter-spacing: 0.1em;
+  }
+  .wellcome .container em {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+  .wellcome .container span.glyphicon {
+    margin-top: 30px;
+    background-color: #FC427B;
+    color: white;
+    padding: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+  }
+  .wellcome .container h3 {
+    margin: 20px 0;
+  }
+  .beauty {
+    height: 400px;
+    background: url('../images/bg2.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .beauty .container {
+    color: white;
+  }
+  .beauty .container .row h4 {
+    margin-top: 60px;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .beauty .container .row h3 {
+    font-size: 32px;
+    font-weight: bolder;
+    line-height: 40px;
+    margin: 15px 0;
+  }
+  .beauty .container .row p {
+    letter-spacing: 0.1em;
+  }
+  section.gallery {
+    padding: 60px 0;
+  }
+  section.gallery .container .gallery-title {
+    text-align: center;
+  }
+  section.gallery .container .gallery-title h3 {
+    line-height: 50px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+  section.gallery .container .gallery-title p {
+    margin-bottom: 40px;
+    color: #999;
+    word-spacing: 0.2em;
+    letter-spacing: 0.1em;
+  }
+  section.gallery .container .row {
+    padding: 0 15px;
+  }
+  section.gallery .container .row div[class^=col] {
+    margin-top: 24px;
+  }
+  section.gallery .container .row div[class^=col] img {
+    border-radius: 5px;
+  }
+  section.gallery .container .row .col-xs-6 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .modal .modal-dialog {
+    width: 450px;
+  }
+  .modal .modal-dialog .modal-content .modal-body {
+    padding: 20px 30px 5px;
+  }
+  .modal .modal-dialog .modal-content .modal-body img {
+    width: 100%;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  }
+  .modal .modal-dialog .modal-content .switch {
+    overflow: hidden;
+    text-align: center;
+  }
+  .modal .modal-dialog .modal-content .switch span {
+    background-color: #ffffff;
+    padding: 15px 10px;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+  .modal .modal-dialog .modal-content .switch .prev {
+    float: left;
+  }
+  .modal .modal-dialog .modal-content .switch .next {
+    float: right;
+  }
+  section.newsletter {
+    padding: 70px 0;
+    background: url('../images/bg3.jpg') no-repeat center;
+  }
+  section.newsletter .container {
+    color: white;
+    text-align: center;
+  }
+  section.newsletter .container h2 {
+    font-weight: 600;
+  }
+  section.newsletter .container p {
+    line-height: 60px;
+    letter-spacing: 0.1em;
+  }
+  section.newsletter .container form div[class^=col] {
+    position: relative;
+  }
+  section.newsletter .container form div[class^=col] .form-group {
+    margin-bottom: 0;
+  }
+  section.newsletter .container form div[class^=col] .form-group label {
+    display: inline;
+  }
+  section.newsletter .container form div[class^=col] .form-group input {
+    margin-bottom: 15px;
+    height: 50px;
+    padding-left: 15px;
+  }
+  section.newsletter .container form div[class^=col] button.btn {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #38d2fe;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+  footer {
+    background-color: #212020;
+    padding: 30px 0;
+  }
+  footer .container .row div[class^=col] {
+    text-align: left;
+    color: white;
+  }
+  footer .container .row div[class^=col] h3 {
+    line-height: 100px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  footer .container .row div[class^=col] p {
+    color: #999;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+  }
+  footer .container .row div[class^=col] ul.news-list h5,
+  footer .container .row div[class^=col] ul.contact-list h5 {
+    font-size: 16px;
+  }
+  footer .container .row div[class^=col] ul.news-list p,
+  footer .container .row div[class^=col] ul.contact-list p {
+    line-height: 35px;
+    margin-bottom: 15px;
+  }
+  footer .container .row div[class^=col] ul.foot-nav li {
+    margin-bottom: 10px;
+  }
+  footer .container .row div[class^=col] ul.foot-nav li a {
+    text-decoration: none;
+    color: #ababab;
+    font-size: 18px;
+  }
+  footer .container-fluid {
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid #999;
+  }
+  footer .container-fluid a.back {
+    display: inline-block;
+    margin-top: 10px;
+    width: 40px;
+    height: 50px;
+    background: url('../images/move-top.png') no-repeat center;
+  }
+  footer .container-fluid p {
+    line-height: 40px;
+    color: #999;
+    font-size: 18px;
+  }
+  footer .container-fluid p a {
+    color: #FC427B;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  footer .container-fluid p a:hover {
+    color: #ffffff;
+  }
+}
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) {
+  .beauty {
+    height: 500px;
+    background: url('../images/bg2.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .beauty .container {
+    color: white;
+  }
+  .beauty .container .row h4 {
+    margin-top: 80px;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .beauty .container .row h3 {
+    font-size: 34px;
+    font-weight: bolder;
+    line-height: 40px;
+    margin: 20px 0;
+  }
+  .beauty .container .row p {
+    letter-spacing: 0.1em;
+  }
+}
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+/*# sourceMappingURL=./style.css.map */

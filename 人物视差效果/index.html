@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+ <style>
+  body,
+  html {
+   margin: 0;
+   padding: 0;
+   perspective: 1000px;
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to bottom, #C6426E, #642B73);
+  }
+
+  .stage {
+   width: 600px;
+   height: 400px;
+   margin: 100px auto;
+   /* background-color:red; */
+   /* overflow: hidden; */
+   padding: 30px;
+
+   /* transform: rotateX(45deg) rotateY(10deg); */
+   transform-style: preserve-3d;
+   /* perspective: 500px; */
+   position: relative;
+  }
+
+  .stage h3 {
+   margin-top: 30px;
+   color: rgb(253, 106, 130);
+   transform: translateZ(-20px);
+  }
+
+  .stage h1 {
+   margin: 30px 0 20px;
+   font-weight: bolder;
+   color: #555;
+   /* font-size: 28px; */
+   transform: translateZ(-10px);
+   text-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.7);
+  }
+
+  .stage::after {
+   content: '';
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transform: translateZ(-20px);
+   background-color: white;
+   z-index: -1;
+   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+   border-radius: 8px;
+  }
+
+  .stage .content {
+   display: flex;
+   justify-content: space-between;
+   /* transform: translateZ(50px); */
+   /* perspective: 500px; */
+   /* background-color:red; */
+
+  }
+
+  .stage .content .photo-frame {
+   width: 180px;
+   height: 250px;
+   background-color: blue;
+   overflow: hidden;
+   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+   border-radius: 5px;
+   transform-style: preserve-3d;
+   perspective: 1000px;
+  }
+
+  .stage .content .photo-frame:nth-child(1) {
+   background: url('./images/3dr_monobg.jpg') no-repeat center;
+   background-size: 250px 150%;
+   /* background-size: ; */
+   background-position: -10px -10px;
+  }
+
+  .stage .content .photo-frame:nth-child(2) {
+   background: url('./images/3dr_spirited.jpg') no-repeat center;
+   background-size: 200px auto;
+   background-size: 250px 150%;
+  }
+
+  .stage .content .photo-frame:nth-child(3) {
+   background: url('./images/3dr_howlbg.jpg') no-repeat center;
+   /* background-position: 0 0; */
+   background-size: 250px 150%;
+   background-position: -10px -10px;
+  }
+
+  .stage .content .photo-frame img {
+   /* width:100%; */
+   height: 100%;
+   /* transform:rotateX(10px) */
+
+  }
+
+  .stage .content .photo-frame:nth-child(1) img {
+
+   transform: translateY(20px)
+  }
+
+  .stage .content .photo-frame:nth-child(2) img {
+
+   transform: translateX(30px) translateY(20px);
+  }
+
+  .stage .content .photo-frame:nth-child(3) img {
+
+   transform: translateX(20px)
+  }
+
+  .stage .content p {
+   color: white;
+   transform: translateZ(10px);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   text-align: center;
+   width: 100%;
+   text-shadow: 0 0 0 10px rgba(0, 0, 0, 1);
+   font-size: 20px;
+   margin: 10px 0;
+   font-weight: bold;
+  }
+ </style>
+</head>
+
+<body>
+
+ <div class="stage">
+
+  <h3>Movies</h3>
+  <h1>Popular</h1>
+  <div class="content">
+   <div class="photo-frame"><img src="./images/3dr_mono.png" alt="">
+    <p>Princess Mononoke</p>
+   </div>
+   <div class="photo-frame"><img src="./images/3dr_chihiro.png" alt="">
+    <p>Spirited Away</p>
+   </div>
+   <div class="photo-frame"><img src="./images/3dr_howlcastle.png" alt="">
+    <p>Howl's Moving Castle</p>
+   </div>
+  </div>
+ </div>
+
+ <script>
+  var photoFrames = document.querySelectorAll('.stage .content .photo-frame')
+  var imgs = document.querySelectorAll('.stage .content .photo-frame img')
+  var stage = document.querySelector('.stage')
+
+  document.body.onmousemove = function (event) {
+   // console.log(stage.offsetTop,stage.offsetLeft)
+   var x = event.clientX - stage.offsetLeft - stage.offsetWidth / 2
+   var y = event.clientY - stage.offsetTop - stage.offsetHeight / 2
+   console.log(x, y)
+   stage.style.transform = 'rotateX(' + -x / 40 + 'deg) rotateY(' + -y / 40 + 'deg)'
+
+   photoFrames.forEach(function (ele, i) {
+    ele.style.backgroundPosition = (x / 60 - 20) + 'px ' + (-y / 60 - 10) + 'px'
+    if (i == 0) {
+     imgs[i].style.transform = 'translateX(' + (-x / 40 + 10) + 'px) translateY(' + (y / 50 + 20) + 'px)'
+    } else if (i == 1) {
+     imgs[i].style.transform = 'translateX(' + (-x / 40 + 30) + 'px) translateY(' + (y / 50 + 20) + 'px)'
+    } else {
+     imgs[i].style.transform = 'translateX(' + (-x / 40 + 10) + 'px) translateY(' + (y / 50) + 'px)'
+    }
+
+   })
+
+
+  }
+ </script>
+</body>
+
+</html>

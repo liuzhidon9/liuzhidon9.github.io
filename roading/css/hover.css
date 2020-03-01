@@ -1,0 +1,430 @@
+
+.clearfix {
+  clear: both;
+}
+
+
+.rotate-box{
+display: flex;
+flex-direction: column;
+justify-content: center;
+flex-wrap: wrap;
+/* background-color: pink; */
+height:300px;
+align-items: center;
+}
+.big-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  /* transform: translateX(100px); */
+  /* float: left; */
+  /* margin-right: 20px; */
+}
+
+.big-box>.box {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+  border-radius: 50%;
+  border: 10px solid #ecab18;
+  border-right-color: #1ad280;
+  border-bottom-color: #1ad280;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+
+  transition-duration: 0.8s;
+  transition-timing-function: linear;
+  /* padding:20px; */
+}
+
+.big-box .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 10px solid transparent;
+}
+
+.big-box img {
+  width: 100%;
+}
+
+.big-box .info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+  /* display:none; */
+  /* visibility: hidden; */
+  opacity: 0;
+  /* transform: rotate(60deg); */
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.big-box:hover>.box {
+  transform: rotate(180deg);
+}
+
+.big-box:hover .info {
+  /* transform: rotate(60deg); */
+
+  background-color: rgba(0, 0, 0, 0.4);
+  /* display: block; */
+  /* visibility: visible; */
+  opacity: 1;
+  /* transform: rotate(-60deg); */
+}
+
+.info h3 {
+  display: inline-block;
+  margin-top: 60px;
+  margin-bottom: 0;
+  font-size: 24px;
+  padding: 0 20px;
+  line-height: 50px;
+  border-bottom: 1px solid rgba(218, 213, 213, 0.541);
+
+}
+
+/* .big-box .info .line{
+  display: inline-block;
+  width:100px;
+  height:1px;
+  background: #fff;
+} */
+.info p {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+
+
+
+/* 飞入 */
+.fade-in {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  transform: translateX(100px);
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+}
+
+
+.fade-in>.box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.fade-in>.box .circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 15px solid rgba(255, 255, 255, 0.253);
+  border-radius: 50%;
+}
+
+.fade-in>.box img {
+  width: 100%;
+}
+
+.fade-in>.info {
+  width: 100%;
+  height: 100%;
+  /* border:10px solid transparent; */
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+  opacity: 0;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  color: white;
+  pointer-events: none;
+}
+
+.fade-in:hover .box {
+  transform: rotate(-60deg);
+}
+
+.fade-in:hover .info {
+  transform: translateX(0px);
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.fade-in-left>.info {
+  transform: translateX(-300px);
+}
+
+.fade-in-right>.info {
+  transform: translateX(200px);
+}
+
+.fade-in-top>.info {
+  transform: translateY(-200px);
+}
+
+.fade-in-bottom>.info {
+  transform: translateY(100px);
+}
+
+
+
+/* 卡片展示 */
+.card {
+  width: 350px;
+  height: 230px;
+  padding: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  float: left;
+  margin-left: 50px;
+}
+
+.card>.content {
+  width: 350px;
+  height: 230px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card .img {
+  width: 350px;
+  height: 230px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.card .img img {
+  width: 350px;
+  height: 230px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.card .card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  text-align: center;
+}
+
+.card .card-info h3 {
+  color: white;
+  background-color: #111;
+  line-height: 60px;
+  transition-delay: 0.3s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.card .card-info p {
+  color: honeydew;
+  transition-delay: 0.3s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+/* 卡片1 */
+.card1 .card-info {
+  transform: translateX(-400px);
+}
+
+.card1:hover .card-info {
+  transform: translateX(0);
+
+}
+
+.card1:hover .img {
+  transform: scale(0.3);
+  opacity: 0;
+}
+
+/* 卡片2 */
+.card2 .card-info {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+}
+
+.card2 .card-info h3 {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(400px);
+}
+
+.card2 .card-info p {
+  transform: translateX(-400px)
+}
+
+.card2 .img {}
+
+.card2:hover .card-info {
+  transform: rotate(0);
+
+}
+
+.card2:hover .card-info h3,
+.card2:hover .card-info p {
+  transform: translateX(0);
+}
+
+.card2:hover .img img {
+  transform: scale(1.1);
+}
+
+
+/* 卡片3 */
+.card3 .card-info {
+  opacity: 0;
+  /* transform: scale(0.3); */
+  transform: translateX(400px);
+  /* background:url('./images/2.jpg'); */
+}
+
+.card3 .card-info h3 {
+  transform: translateY(-100px);
+}
+
+.card3 .card-info p {
+  transform: translateX(-400px);
+}
+
+.card3 .img {
+  transform-origin: right;
+}
+
+.card3:hover .img {
+  transform: translateY(-300px);
+}
+
+.card3:hover .card-info,
+.card3:hover h3,
+.card3:hover p {
+  opacity: 1;
+  transform: scale(1);
+  transform: translateY(0);
+}
+
+/* 齿轮 */
+.gear{
+  width:200px;
+  height:200px;
+  /* background-color: pink; */
+  margin:20px auto;
+  position: relative;
+}
+.gear .box{
+  
+  /* position: relative; */
+  
+  position: absolute;
+}
+.gear .box::after,.gear .box::before{
+  content:'';
+  display: block;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  transform:rotateZ(30deg);
+  
+  /* background-image: radial-gradient(white 40%,orange 40%); */
+}
+.gear .box::before{
+  transform:rotateZ(60deg);
+}
+.gear .top{
+  top:-20px;
+  left:30px;
+  width:100px;
+  height:100px;
+  border-radius: 8px;
+  background-color: rgb(132, 130, 241);
+  border-radius: 8px;
+  animation: gear 8s linear infinite;
+}
+.gear .top::before, .gear .top::after{
+  background-image: radial-gradient(white 40%, rgb(132, 130, 241) 40%);
+  border-radius: 8px;
+}
+.gear .left{
+  left:10px;
+  bottom:10px;
+  width:80px;
+  height:80px;
+  background-color: pink;
+  border-radius: 6px;
+  animation: gear 6s linear infinite reverse;
+}
+.gear .left::before, .gear .left::after{
+  background-image: radial-gradient(white 40%, pink 40%);
+  border-radius: 6px;
+}
+.gear .right{
+  right:20px;
+  bottom:50px;
+  width:60px;
+  height:60px;
+  background-color: rgb(245, 193, 96);
+  border-radius: 4px;
+  animation: gear 4s linear infinite reverse;
+
+}
+.gear .right::before, .gear .right::after{
+  background-image: radial-gradient(white 40%, rgb(245, 193, 96) 40%);
+  border-radius: 4px;
+}
+@keyframes gear{
+  0%{
+    transform:rotate(0deg)
+  }
+  
+  100%{
+    transform:rotate(360deg)
+  }
+}
+
+/* 遮罩 */
+.gear .mask{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 3;
+  width:100%;
+  height:100%;
+  /* background-color: rgba(0, 0, 0, 0.24); */
+  transform:scale(0.7);
+  border-radius: 50%;
+  box-shadow: 0 0 30px 120px rgba(255, 255, 255, 0.651),
+  0 0 8px 0px rgba(19, 19, 19, 0.342) inset;
+}

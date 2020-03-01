@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #F4E2C9 20%, #F4D7C9 100%);
+      height:100vh;
+    }
+    h1{
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      color: #464637;
+      line-height: 80px;
+    }
+    ul.box {
+      width: 300px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      padding: 10px;
+      /* border: 1px solid rgb(133, 120, 120); */
+      transition: all 0.3s;
+      margin: 0 auto;
+      position: relative;
+    }
+    ul.box::after{
+      content: 'Drop-List';
+      display:block;
+      width:80px;
+      height:36px;
+      background: #ff7373;
+      position: absolute;
+      top:-18px;
+      left:0;
+      color: white;
+      line-height: 36px;
+      font-weight: bold;
+    }
+
+    ul.box>li {
+      line-height: 60px;
+      margin-bottom: 1px;
+      background: white;
+      text-align: center;
+      font-size: 24px;
+      color: #464637;
+      /* transition: all 0.5s; */
+      background-clip: content-box;
+      position: relative;
+      /* border-bottom: 1px solid #464637; */
+      transition: all 0.3s;
+    }
+    ul.box>li>p.item{
+      position: relative;
+    }
+    ul.box>li>p.item::after{
+      content:'+';
+      display:block;
+      position: absolute;
+      /* width:20px;
+      height:20px; */
+      right:10px;
+      top:0;
+      font-weight: bold;
+    }
+
+    .content {
+      display: none;
+    }
+
+    .content .slide-title {
+
+      background: rgba(247, 144, 144, 0.795);
+      position: relative;
+    }
+    .content .slide-title::after{
+      content:'-';
+      display:block;
+      position: absolute;
+      /* width:20px;
+      height:20px; */
+      right:10px;
+      top:0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    li.active .content {
+      position: relative;
+      top: 0px;
+      left: 0;
+      transition: all 0.5s;
+
+    }
+
+    li.active {
+      height: 240px;
+    }
+
+    ul.list>li {
+      text-align: left;
+      padding-left: 20px;
+      box-sizing: border-box;
+      background: rgba(204, 108, 108, 0.712);
+    }
+    
+    @keyframes left {
+      0%{
+        transform: translateX(0);
+      }
+      100%{
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>可拖拽列表</h1>
+  <ul class="box">
+    <li id='item1' draggable="true">
+      <p class="item">item 1</p>
+      <div class="content">
+        <div class="slide-title">item 1</div>
+        <ul class="list">
+          <li>list 1</li>
+          <li>list 2</li>
+          <li>list 3</li>
+        </ul>
+      </div>
+    </li>
+    <li id='item2' draggable="true">
+      <p class="item">item 2</p>
+      <div class="content">
+        <div class="slide-title">item 2</div>
+        <ul class="list">
+          <li>list 1</li>
+          <li>list 2</li>
+          <li>list 3</li>
+        </ul>
+      </div>
+    </li>
+    <li id='item3' draggable="true">item 3</li>
+    <li id='item4' draggable="true">item 4</li>
+    <li id='item5' draggable="true">item 5</li>
+    <li id='item6' draggable="true">item 6</li>
+  </ul>
+
+  <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    var up
+    var dowmm
+
+    var x = 0
+
+    $('.box>li').each(function (i, e) {
+      e.ondragstart = function (event) {
+        event.dataTransfer.setData("Text", event.target.id);
+        node = e
+
+
+      }
+      e.ondragover = function (e) {
+
+        console.log(x, e.clientY);
+
+        if (x < e.clientY) {
+          dowmm = true;
+          up = false;
+
+        } else if (x > e.clientY) {
+          dowmm = false;
+          up = true;
+        }
+        x = e.clientY
+        event.preventDefault()
+        if (up) {
+          // $(this).css('border-top', '2px solid red')
+          // $(this).css('border-bottom', 'none')
+          $(node).css({
+            background: 'rgba(0,0,0,0)',
+            opacity: '0.5'
+          })
+          $(this).before(node)
+        } else if (dowmm) {
+          // $(this).css('border-bottom', '2px solid red')
+          // $(this).css('border-top', 'none')
+          $(node).css({
+            background: 'rgba(0,0,0,0)',
+            opacity: '0.5'
+          })
+
+          $(this).after(node)
+        }
+        $("#test").ondragover = function (even) {
+          even.preventDefault()
+        }
+
+      }
+
+      e.ondragleave = function (e) {
+        // console.log(document.getElementById(event.dataTransfer.getData('Text')))
+        event.preventDefault()
+        if (up) {
+          $(this).css('border', 'none')
+        } else if (dowmm) {
+          $(this).css('border', 'none')
+        }
+
+        // console.log(node);
+        $(node).css({
+          background: 'white',
+          opacity: '1'
+        })
+
+      }
+      e.ondrop = function () {
+        $(document.getElementById(event.dataTransfer.getData('Text'))).css({
+          background: 'white',
+          opacity: '1'
+        })
+
+        // if (up) {
+        //   $(this).css('border', 'none')
+        //   // $(this).before(document.getElementById(event.dataTransfer.getData('Text')))
+        // } else if (dowmm) {
+        //   $(this).css('border', 'none')
+        //   // $(this).after(document.getElementById(event.dataTransfer.getData('Text')))
+        // }
+
+
+
+      }
+      $(e).click(function () {
+        // console.log($(this).siblings());
+        $(this).children().slideToggle(300, function () {
+         
+          
+
+          
+        })
+        $(this).siblings().children('.content').slideUp(300).end().children('p').slideDown(100)
+      })
+    })
+  </script>
+</body>
+
+</html>

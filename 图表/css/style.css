@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: -webkit-linear-gradient(330deg, rgba(0, 73, 38, 0.4), rgba(0, 0, 46, 0)), -webkit-linear-gradient(210deg, rgba(150, 50, 50, 0.4), rgba(0, 0, 200, 0));
+  background-image: -moz- oldlinear-gradient(330deg, rgba(0, 73, 38, 0.4), rgba(0, 0, 46, 0)), -moz- oldlinear-gradient(210deg, rgba(150, 50, 50, 0.4), rgba(0, 0, 200, 0));
+  background-image: -o-linear-gradient(330deg, rgba(0, 73, 38, 0.4), rgba(0, 0, 46, 0)), -o-linear-gradient(210deg, rgba(150, 50, 50, 0.4), rgba(0, 0, 200, 0));
+  background-image: linear-gradient(120deg, rgba(0, 73, 38, 0.4), rgba(0, 0, 46, 0)), linear-gradient(240deg, rgba(150, 50, 50, 0.4), rgba(0, 0, 200, 0));
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 100px;
+  -webkit-perspective: 1500px;
+     -moz-perspective: 1500px;
+          perspective: 1500px;
+}
+.stage {
+  width: 400px;
+  height: 550px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  background: url('../images/600x600.jpg');
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 50% 50% 150px;
+     -moz-transform-origin: 50% 50% 150px;
+      -ms-transform-origin: 50% 50% 150px;
+       -o-transform-origin: 50% 50% 150px;
+          transform-origin: 50% 50% 150px;
+}
+.stage::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 59, 59, 0.877);
+  -webkit-transform: translateZ(-20px);
+     -moz-transform: translateZ(-20px);
+          transform: translateZ(-20px);
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+     -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+.stage .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 39, 109, 0.274);
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.stage .content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+.stage .content h2 {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 1;
+  font-size: 32px;
+}
+.stage .content h2.step {
+  margin: 0;
+}
+.stage .content h3 {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 1;
+  margin: 10px 0 20px;
+}
+.stage .content .data {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.stage .content .data span {
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  -webkit-transform: rotateZ(-45deg);
+     -moz-transform: rotateZ(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+  margin: 0 10px;
+}
+.stage .content .data span i {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 2s;
+     -moz-transition-delay: 2s;
+       -o-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  height: 100%;
+  background: whitesmoke;
+  -webkit-transform-origin: left bottom;
+     -moz-transform-origin: left bottom;
+      -ms-transform-origin: left bottom;
+       -o-transform-origin: left bottom;
+          transform-origin: left bottom;
+  color: transparent;
+}
+.stage .content .data span i.top {
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+  -webkit-transform-origin: 50% 50%;
+     -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+       -o-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: rotateZ(90deg);
+     -moz-transform: rotateZ(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+.stage .content .data span i.left {
+  text-align: right;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotateY(-90deg);
+     -moz-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+  width: 0;
+  background-color: gray;
+  background: -webkit-gradient(linear, right top, left top, from(#feffff), color-stop(0%, #ddf1f9), to(#a0d8ef));
+  background: -webkit-linear-gradient(right, #feffff 0%, #ddf1f9 0%, #a0d8ef 100%);
+  background: -moz- oldlinear-gradient(right, #feffff 0%, #ddf1f9 0%, #a0d8ef 100%);
+  background: -o-linear-gradient(right, #feffff 0%, #ddf1f9 0%, #a0d8ef 100%);
+  background: linear-gradient(to left, #feffff 0%, #ddf1f9 0%, #a0d8ef 100%);
+}
+.stage .content .data span i.right {
+  width: 0;
+  background-color: gray;
+  -webkit-transform: rotateY(-90deg) rotateX(90deg);
+     -moz-transform: rotateY(-90deg) rotateX(90deg);
+          transform: rotateY(-90deg) rotateX(90deg);
+  background: -webkit-gradient(linear, right top, left top, from(#feffff), color-stop(0%, #85d7f7), to(#4c8596));
+  background: -webkit-linear-gradient(right, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+  background: -moz- oldlinear-gradient(right, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+  background: -o-linear-gradient(right, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+  background: linear-gradient(to left, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+}
+.stage.active {
+  -webkit-transform: rotateX(60deg);
+     -moz-transform: rotateX(60deg);
+          transform: rotateX(60deg);
+}
+.stage.active .content h3 {
+  -webkit-transform: translateZ(50px);
+     -moz-transform: translateZ(50px);
+          transform: translateZ(50px);
+  opacity: 0;
+}
+.stage.active .content h2.step {
+  -webkit-transform: translateZ(60px);
+     -moz-transform: translateZ(60px);
+          transform: translateZ(60px);
+  opacity: 0;
+}
+.stage.active .content .num {
+  -webkit-transform: translateY(120px) translateZ(50px);
+     -moz-transform: translateY(120px) translateZ(50px);
+          transform: translateY(120px) translateZ(50px);
+}
+.stage.active .content .data span {
+  -webkit-transform: rotateZ(-60deg);
+     -moz-transform: rotateZ(-60deg);
+      -ms-transform: rotate(-60deg);
+       -o-transform: rotateZ(-60deg);
+          transform: rotateZ(-60deg);
+}
+.stage.active .content .data span i {
+  color: black;
+}
+.stage.active .content .data span i.top {
+  -webkit-transform: translateZ(100px);
+     -moz-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+.stage.active .content .data span i.left {
+  width: 100px;
+  padding-right: 20px;
+}
+.stage.active .content .data span i.right {
+  width: 100px;
+}
+.stage.active .mask {
+  background-color: rgba(17, 12, 53, 0.61);
+}
+/*# sourceMappingURL=./style.css.map */
