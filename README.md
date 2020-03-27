@@ -47,7 +47,7 @@
 ## 7.HTML5+JavaScript
 
 - **[musicPlayer-Demo](https://liuzhidon9.github.io/musicplayer/)**
-- **[可拖放列表](https://liuzhidon9.github.io/drop.html/)**
+- **[可拖放列表](https://liuzhidon9.github.io/drop.html)**
 
 ## 8.HTML+CSS
 
